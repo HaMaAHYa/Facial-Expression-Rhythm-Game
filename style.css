@@ -1,0 +1,133 @@
+:root{
+    --bg:#12141a;
+    --fg:#eef;
+    --card:#1c1f29;
+    --g:#2ecc71;
+    --y:#f1c40f;
+    --r:#e74c3c
+}
+*{
+    box-sizing:border-box
+}
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:system-ui,sans-serif;
+    text-align:center
+}
+main{
+    max-width:760px;
+    margin:auto;
+    padding:12px
+}
+#hud{
+    display:flex;
+    justify-content:space-around;
+    background:var(--card);
+    border-radius:10px;
+    padding:8px;
+    margin-bottom:8px
+}
+#hud b{
+    display:block;
+    font-size:22px
+}
+
+#stage{
+    position:relative;
+    width:60%;
+    max-width: 420px;
+    margin: 15px auto;
+    aspect-ratio:4/3;
+    background:#000;
+    border:6px solid #333;
+    border-radius:14px;
+    overflow:hidden;
+    transition:border-color .15s;
+}
+video,canvas{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    transform:scaleX(-1);
+    object-fit:cover
+}
+#target{
+    position:absolute;
+    top:8px;
+    left:0;
+    right:0;
+    font-size:72px;
+    text-shadow:0 2px 8px #000
+}
+#tname{
+    position:absolute;
+    top:92px;
+    left:0;
+    right:0;
+    font-weight:700;
+    font-size:22px;
+    text-shadow:0 2px 6px #000
+}
+#msg{
+    position:absolute;
+    bottom:10px;
+    left:0;
+    right:0;
+    font-size:28px;
+    font-weight:700;
+    text-shadow:0 2px 6px #000
+}
+
+#track{
+  display:grid;
+  grid-template-columns:repeat(4,2fr);
+  gap:20px;
+  max-width:100%;
+  margin:16px 0;
+}
+.cell{
+  width:auto;aspect-ratio:1;
+  font-size:clamp(28px,5vw,52px);
+  line-height:normal;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:14px;
+  border-width:4px;
+}
+
+.cell.cur{
+    border-color:#fff;
+    transform:scale(1.15)
+}
+.cell.g{
+    background:var(--g)
+}.cell.y{
+    background:var(--y)
+}.cell.r{
+    background:var(--r)
+}
+button{
+    font-size:18px;
+    padding:10px 26px;
+    border:0;
+    border-radius:10px;
+    background:#4a7dff;
+    color:#fff;
+    cursor:pointer
+}
+button.alt{
+    background:#444;
+    font-size:15px;
+    padding:10px 16px
+}
+button:disabled{
+    opacity:.5;
+    cursor:default
+}
+#status{
+    opacity:.7;
+    margin:6px;
+    font-size:14px
+}
