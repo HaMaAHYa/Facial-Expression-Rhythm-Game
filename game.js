@@ -12,7 +12,7 @@ const LM21 = [107,105,46, 336,334,276, 159,145,386,374, 33,263, 1, 61,291,13,14,
 /* ---------- expressions ---------- */
 const EX = {
   happy:['😄','Happiness'], sad:['😢','Sadness'], fear:['😱','Fear'],
-  disgust:['🤢','Disgust'], surprise:['😲','Surprise'], angry:['😠','Angry']
+  disgust:['🫤','Disgust'], surprise:['😲','Surprise'], angry:['😠','Angry']
 };
 const KEYS = Object.keys(EX);
 
